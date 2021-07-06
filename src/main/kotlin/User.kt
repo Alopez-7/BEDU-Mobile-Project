@@ -1,18 +1,22 @@
-class User {
+abstract class User {
 
     var userName: String
     var password: String
+    var email: String
     var logedIn = false
-    constructor(userName:String,password:String){
+    constructor(userName:String,email: String,password:String){
         this.userName = userName
         this.password = password
+        this.email = email
+
         logedIn = true
         println("Usuarario Creado")
 
     }
-    constructor(userName:String,password:String,listCreator: Boolean){
+    constructor(userName:String,email: String,password:String,listCreator: Boolean){
         this.userName = userName
         this.password = password
+        this.email = email
         logedIn = false
 
 
@@ -42,5 +46,9 @@ class User {
 }){
 
 }*/
+class RegularUser(userName: String,email: String,password: String,payment: String) : User(userName,email,password){
 
+
+
+}
 

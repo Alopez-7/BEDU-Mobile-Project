@@ -1,5 +1,5 @@
-var currentUser : User? = null
-val usuarios = mutableListOf(User("Einar","gay",true),User("ramon","puto",true))
+var currentUser : RegularUser? = null
+val usuarios = mutableListOf(RegularUser("Einar","abd","gay",""),RegularUser("ramon","abc","puto",""))
 
 
 
@@ -34,7 +34,7 @@ fun main() {
                         println("Ingrese Contraseña:")
                         var pass = readLine().toString()
                         if (login.validPassword(pass)) {
-                            currentUser = User(name, pass)
+                            currentUser = RegularUser(name, pass,"","")
                             usuarios.add(currentUser!!)
                         }
                         mainSelector = 1
